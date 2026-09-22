@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  :root {
+    --text: #e7f3f9;
+    --background-primary: #000000;
+    --background-secondary: #050505;
+    --primary: #8abce0;
+    --secondary: #7d4a21;
+    --accent: #95d45e;
+    --border: #1a1a1a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    width: 1200px;
+    height: 800px;
+    background: var(--background-primary);
+    color: var(--text);
+    font-family: -apple-system, 'Segoe UI', sans-serif;
+    overflow: hidden;
+  }
+  .app {
+    display: flex;
+    width: 1200px;
+    height: 800px;
+  }
+  .sidebar {
+    width: 300px;
+    background: var(--background-secondary);
+    border-right: 1px solid var(--border);
+    padding: 26px 20px;
+    font-size: 15px;
+  }
+  .sidebar .vault-name {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 17px;
+    margin-bottom: 26px;
+    letter-spacing: 0.3px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .sidebar .vault-name .dot {
+    width: 10px; height: 10px; border-radius: 3px;
+    background: var(--accent);
+  }
+  .sidebar .item {
+    color: var(--text);
+    opacity: 0.75;
+    padding: 8px 10px;
+    border-radius: 6px;
+    margin-bottom: 4px;
+  }
+  .sidebar .item.active {
+    background: rgba(149, 212, 94, 0.12);
+    color: var(--accent);
+    opacity: 1;
+  }
+  .sidebar .folder {
+    color: var(--primary);
+    opacity: 0.9;
+    margin-top: 22px;
+    margin-bottom: 6px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+  .main {
+    flex: 1;
+    padding: 56px 72px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .titlebar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 48px;
+  }
+  .dot3 {
+    width: 13px; height: 13px; border-radius: 50%;
+    background: var(--secondary);
+    opacity: 0.5;
+  }
+  .badge {
+    display: inline-block;
+    color: var(--accent);
+    background: rgba(149, 212, 94, 0.1);
+    border: 1px solid rgba(149, 212, 94, 0.35);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+    width: fit-content;
+  }
+  h1 {
+    color: var(--accent);
+    font-size: 52px;
+    font-weight: 800;
+    margin-bottom: 22px;
+    letter-spacing: -0.5px;
+  }
+  h2 {
+    color: var(--accent);
+    font-size: 24px;
+    font-weight: 700;
+    margin: 34px 0 14px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 1.65;
+    color: var(--text);
+    opacity: 0.85;
+    max-width: 700px;
+  }
+  .callout {
+    border-left: 4px solid var(--primary);
+    background: rgba(138, 188, 224, 0.08);
+    padding: 16px 22px;
+    font-size: 18px;
+    color: var(--primary);
+    border-radius: 0 8px 8px 0;
+    margin-top: 28px;
+    max-width: 680px;
+  }
+  .swatches {
+    display: flex;
+    gap: 14px;
+    margin-top: 30px;
+  }
+  .swatch {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+  }
+  .name {
+    position: absolute;
+    bottom: 28px;
+    right: 40px;
+    font-size: 14px;
+    color: var(--primary);
+    opacity: 0.5;
+    letter-spacing: 0.8px;
+  }
+</style>
+</head>
+<body>
+  <div class="app">
+    <div class="sidebar">
+      <div class="vault-name"><span class="dot"></span>My Vault</div>
+      <div class="folder">Notes</div>
+      <div class="item">Welcome.md</div>
+      <div class="item active">Ideas.md</div>
+      <div class="item">Projects.md</div>
+      <div class="item">Daily Notes.md</div>
+      <div class="folder">References</div>
+      <div class="item">Reading List.md</div>
+      <div class="item">Links.md</div>
+      <div class="folder">Archive</div>
+      <div class="item">2025 Review.md</div>
+    </div>
+    <div class="main">
+      <div class="titlebar">
+        <div class="dot3"></div><div class="dot3"></div><div class="dot3"></div>
+      </div>
+      <div class="badge">Obsidian Theme</div>
+      <h1>Midnight Fjord Black</h1>
+      <p>Solid black background, elegant typography and green accent colors — the same look as the original Midnight-Fjord, now without the translucent navy blue.</p>
+      <h2>Why black</h2>
+      <p>Consistent look across desktop and mobile, with no dependency on transparency.</p>
+      <div class="callout">A simple, focused fork of Midnight-Fjord by Quintavalle Pietro.</div>
+      <div class="swatches">
+        <div class="swatch" style="background:#000000"></div>
+        <div class="swatch" style="background:#95d45e"></div>
+        <div class="swatch" style="background:#8abce0"></div>
+        <div class="swatch" style="background:#7d4a21"></div>
+        <div class="swatch" style="background:#e7f3f9"></div>
+      </div>
+      <div class="name">midnight fjord black</div>
+    </div>
+  </div>
+</body>
+</html>
