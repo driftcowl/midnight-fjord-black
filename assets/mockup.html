@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  :root {
+    --text: #e7f3f9;
+    --background-primary: #000000;
+    --background-secondary: #050505;
+    --primary: #8abce0;
+    --secondary: #7d4a21;
+    --accent: #95d45e;
+    --border: #1a1a1a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    width: 512px;
+    height: 288px;
+    background: var(--background-primary);
+    color: var(--text);
+    font-family: -apple-system, 'Segoe UI', sans-serif;
+    overflow: hidden;
+  }
+  .app {
+    display: flex;
+    width: 512px;
+    height: 288px;
+  }
+  .sidebar {
+    width: 130px;
+    background: var(--background-secondary);
+    border-right: 1px solid var(--border);
+    padding: 10px 8px;
+    font-size: 10px;
+  }
+  .sidebar .vault-name {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 11px;
+    margin-bottom: 10px;
+    letter-spacing: 0.3px;
+  }
+  .sidebar .item {
+    color: var(--text);
+    opacity: 0.75;
+    padding: 3px 4px;
+    border-radius: 4px;
+    margin-bottom: 2px;
+  }
+  .sidebar .item.active {
+    background: rgba(149, 212, 94, 0.12);
+    color: var(--accent);
+    opacity: 1;
+  }
+  .sidebar .folder {
+    color: var(--primary);
+    opacity: 0.9;
+    margin-top: 8px;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .main {
+    flex: 1;
+    padding: 22px 28px;
+    display: flex;
+    flex-direction: column;
+  }
+  .titlebar {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 18px;
+  }
+  .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--secondary);
+    opacity: 0.5;
+  }
+  h1 {
+    color: var(--accent);
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+  h2 {
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 700;
+    margin: 12px 0 6px;
+  }
+  p {
+    font-size: 11px;
+    line-height: 1.6;
+    color: var(--text);
+    opacity: 0.85;
+    margin-bottom: 6px;
+  }
+  .callout {
+    border-left: 3px solid var(--primary);
+    background: rgba(138, 188, 224, 0.08);
+    padding: 6px 10px;
+    font-size: 10px;
+    color: var(--primary);
+    border-radius: 0 4px 4px 0;
+    margin-top: 8px;
+  }
+  .name {
+    position: absolute;
+    bottom: 10px;
+    right: 16px;
+    font-size: 9px;
+    color: var(--primary);
+    opacity: 0.5;
+    letter-spacing: 0.5px;
+  }
+</style>
+</head>
+<body>
+  <div class="app">
+    <div class="sidebar">
+      <div class="vault-name">Meu Vault</div>
+      <div class="folder">Notas</div>
+      <div class="item">Boas-vindas.md</div>
+      <div class="item active">Ideias.md</div>
+      <div class="item">Projetos.md</div>
+      <div class="item">Notas Diárias.md</div>
+      <div class="folder">Referências</div>
+      <div class="item">Leituras.md</div>
+      <div class="item">Links.md</div>
+    </div>
+    <div class="main">
+      <div class="titlebar">
+        <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+      </div>
+      <h1>Midnight Fjord Black</h1>
+      <p>Fundo preto sólido, tipografia elegante e cores de destaque em verde — a mesma estética do Midnight-Fjord original, agora sem o azul-marinho translúcido.</p>
+      <h2>## Por que preto</h2>
+      <p>Consistência entre desktop e mobile, sem depender de transparência.</p>
+      <div class="callout">💡 Um fork simples, direto ao ponto.</div>
+      <div class="name">midnight fjord black</div>
+    </div>
+  </div>
+</body>
+</html>

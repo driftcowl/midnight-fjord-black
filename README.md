@@ -1,5 +1,7 @@
 # Midnight Fjord Black
 
+![screenshot](screenshot.png)
+
 Um fork do tema [Midnight-Fjord](https://github.com/Quinta0/Midnight-Fjord), de
 [Quintavalle Pietro](https://quinta0.github.io/), com uma única mudança: o fundo
 (área principal e as duas sidebars) passa de azul-marinho translúcido para preto
